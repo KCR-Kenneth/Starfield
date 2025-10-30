@@ -15,7 +15,7 @@ public void setup() {
 }
 
 public void draw() {
-  background(0);
+  background(0,0,0);
   translate(300,300,10);
   
   for (int i = 0; i < lucky.length-1-oddballs; i++) {
