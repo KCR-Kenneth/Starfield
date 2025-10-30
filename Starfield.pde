@@ -21,13 +21,13 @@ void draw() {
 background(0,0,0);
 
 translate(300,300,10);
- for (int i = 0; i < lucky.length-1-oddballs; i++) {
+ /*for (int i = 0; i < lucky.length-1-oddballs; i++) {
     pushMatrix();
       rotate(rotate);
       lucky[i].move();
       lucky[i].show();
     popMatrix();
-  }
+  }*/
   for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
       lucky[i].redirect();
       lucky[i].move();
@@ -54,7 +54,7 @@ translate(300,300,10);
   } else {
     rotate = Math.PI/32*tic;
   }
-  triangles();
+  //triangles();
 }
 
 public void triangles() {
