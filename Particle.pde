@@ -35,7 +35,7 @@ class Particle {
     if (getDistance() >= 190*scale) {
       setmyX(getmyX() - getmyX()/20);
       setmyY(getmyY() - getmyY()/20);
-      setmyA((float)(Math.random()*PI+PI/2)+getmyA());
+      setmyA((float)(Math.random()*Math.PI+Math.PI/2)+getmyA());
     }
   }
   
@@ -74,3 +74,4 @@ class Particle {
     return myC;
   }
 }
+
