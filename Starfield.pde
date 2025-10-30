@@ -23,7 +23,7 @@ background(0,0,0);
 translate(300,300,10);
  for (int i = 0; i < lucky.length-1-oddballs; i++) {
     pushMatrix();
-      //rotate(rotate);
+      rotate(rotate);
       lucky[i].move();
       lucky[i].show();
     popMatrix();
@@ -35,7 +35,7 @@ translate(300,300,10);
   }
   stroke(0);
   /*for (int i = 0; i < 8; i++) {
-    rotate(PI/4*i);
+    rotate(Math.PI/4*i);
     pushMatrix();
       translate(0,-200*scale,0);
       rotateX(PI/2);
@@ -48,23 +48,23 @@ translate(300,300,10);
      tic = 1; 
   }
   if (tic < 32 || tic > 512 - 32) {
-    rotate = PI/96*tic;
+    rotate = Math.PI/96*tic;
   } else if (tic < 64 || tic > 512 - 64) {
-    rotate = PI/64*tic;
+    rotate = Math.PI/64*tic;
   } else {
-    rotate = PI/32*tic;
+    rotate = Math.PI/32*tic;
   }
-  //triangles();
+  triangles();
 }
 
 public void triangles() {
-  //rotate(rotate);
+  rotate(rotate);
   
   pushMatrix();
   for (int i = 0; i < 8; i++) {
-    //rotate(PI/4);
+    rotate(Math.PI/4);
     fill (255);
-    triangle(0,0,tan(PI/8)*200*scale, -200*scale, -tan(PI/8)*200*scale, -200*scale);
+    triangle(0,0,tan(Math.PI/8)*200*scale, -200*scale, -tan(Math.PI/8)*200*scale, -200*scale);
   }
   popMatrix();
 }
