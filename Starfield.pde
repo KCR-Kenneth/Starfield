@@ -29,7 +29,6 @@ for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
     lucky[i].move();
     lucky[i].show();
   }
-decorate();
 }
 
 public void decorate() {
