@@ -60,10 +60,11 @@ translate(300,300,10);
 public void triangles() {
   //rotate(rotate);
   
-  
+  pushMatrix();
   for (int i = 0; i < 8; i++) {
     //rotate(PI/4);
     fill (255);
     triangle(0,0,tan(PI/8)*200*scale, -200*scale, -tan(PI/8)*200*scale, -200*scale);
   }
+  popMatrix();
 }
