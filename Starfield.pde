@@ -5,7 +5,7 @@ public int oddballs = 10;
 public Particle[] lucky = new Particle[200];
 
 public void setup() {
-  size(600,600);
+  size(600,600,P3D);
   for (int i = 0; i < lucky.length; i++) {
     lucky[i] = new Particle();
   }
