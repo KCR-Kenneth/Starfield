@@ -17,6 +17,12 @@ void setup() {
 void draw() {
 ellipse(300,300,20,20);
 
+
+for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
+    lucky[i].redirect();
+    lucky[i].move();
+    lucky[i].show();
+  }
 }
 
 public void decorate() {
