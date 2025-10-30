@@ -12,12 +12,13 @@ void setup() {
   for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
     lucky[i] = new Oddball();
   }
+  background(0,0,0);
 }
 
 void draw() {
 ellipse(300,300,20,20);
 
-  
+  translate(300,300,10);
   for (int i = 0; i < lucky.length-1-oddballs; i++) {
     pushMatrix();
       rotate(rotate);
