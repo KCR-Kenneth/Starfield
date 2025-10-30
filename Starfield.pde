@@ -1,3 +1,6 @@
+//Differences: Removed triangles() and rotate(rotate) in lucky[i].show();
+// Hypothesis: Constant rotation is leading to freeze
+
 public int tic = 64;
 public float rotate;
 public float scale = 1.2;
@@ -24,14 +27,11 @@ translate(300,300,10);
       lucky[i].show();
     popMatrix();
   }
-for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
-    lucky[i].redirect();
-    lucky[i].move();
-    lucky[i].show();
+  for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
+      lucky[i].redirect();
+      lucky[i].move();
+      lucky[i].show();
   }
-}
-
-public void decorate() {
   stroke(0);
   for (int i = 0; i < 8; i++) {
     rotate(PI/4*i);
@@ -53,6 +53,10 @@ public void decorate() {
   } else {
     rotate = PI/32*tic;
   }
+  
+}
+
+public void triangles() {
   rotate(rotate);
   
   
