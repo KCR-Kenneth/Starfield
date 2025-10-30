@@ -1,10 +1,10 @@
-public int tic = 64;
-public float rotate;
-public float scale = 1.2;
-public int oddballs = 10;
-public Particle[] lucky = new Particle[200];
+ int tic = 64;
+ float rotate;
+ float scale = 1.2;
+ int oddballs = 10;
+ Particle[] lucky = new Particle[200];
 
-public void setup() {
+ void setup() {
   size(600,600,P3D);
   for (int i = 0; i < lucky.length; i++) {
     lucky[i] = new Particle();
@@ -14,7 +14,7 @@ public void setup() {
   }
 }
 
-public void draw() {
+ void draw() {
   background(0,0,0);
   translate(300,300,10);
   
@@ -37,7 +37,7 @@ public void draw() {
 
 
 
-public void decorate() {
+ void decorate() {
   stroke(0);
   for (int i = 0; i < 8; i++) {
     rotate(PI/4*i);
@@ -70,9 +70,9 @@ public void decorate() {
 }
 
 class Particle {
-  private float myX, myY, myS, myA;
-  private int myC;
-  public Particle() {
+   float myX, myY, myS, myA;
+   int myC;
+   Particle() {
     myX = 0;
     myY = 0;
     myS = (float)(Math.random()*3+1);
@@ -80,7 +80,7 @@ class Particle {
     myC = color((int)(Math.random()*80 +60), 0, 0);
   }
   
-  public void move() {
+   void move() {
     if ((tic < 64 || tic > 512 - 64) && (!(getDistance() < 30*scale) || Math.random() >= 0.5)) {
       myX-=2*cos(myA);
       myY-=2*sin(myA);
@@ -93,7 +93,7 @@ class Particle {
     }
   }
   
-  public void show() {
+   void show() {
     pushMatrix();
       translate(myX, myY,0);
       fill(myC);
@@ -102,7 +102,7 @@ class Particle {
     popMatrix();
   }
   
-  public void redirect() {
+   void redirect() {
     if (getDistance() >= 190*scale) {
       setmyX(getmyX() - getmyX()/20);
       setmyY(getmyY() - getmyY()/20);
@@ -110,38 +110,38 @@ class Particle {
     }
   }
   
-  public float getDistance() {
+   float getDistance() {
     return sqrt(getmyX()*getmyX()+getmyY()*getmyY());
   }
   
-  public void setmyX (float input) {
+   void setmyX (float input) {
     myX = input;
   }
-  public void setmyY (float input) {
+   void setmyY (float input) {
     myY = input;
   }
-  public void setmyS (float input) {
+   void setmyS (float input) {
     myS = input;
   }
-  public void setmyA (float input) {
+   void setmyA (float input) {
     myA = input;
   }
-  public void setmyC (int input) {
+   void setmyC (int input) {
     myC = input;
   }
-  public float getmyX () {
+   float getmyX () {
     return myX;
   }
-  public float getmyY () {
+   float getmyY () {
     return myY;
   }
-  public float getmyS () {
+   float getmyS () {
     return myS;
   }
-  public float getmyA () {
+   float getmyA () {
     return myA;
   }
-  public int getmyC () {
+   int getmyC () {
     return myC;
   }
 }
@@ -149,7 +149,7 @@ class Particle {
 //use a setter and getter, as though the variable is inaccessible
 
 class Oddball extends Particle {
-  public Oddball() {
+   Oddball() {
     setmyX(0);
     setmyY(-100);
     setmyS((float)(Math.random()*3+3));
@@ -157,7 +157,7 @@ class Oddball extends Particle {
     setmyC(color((int)(Math.random()*80 +20), 0, (int)(Math.random()*80 +60)));
   }
   
-  public void move() {
+   void move() {
     setmyX(getmyX() + getmyS()*cos(getmyA()));
     setmyY(getmyY() + getmyS()*sin(getmyA()));
   }
