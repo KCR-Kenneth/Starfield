@@ -16,10 +16,14 @@ void setup() {
 
 void draw() {
 background(0,0,0);
-ellipse(300,300,20,20);
 
 translate(300,300,10);
- 
+ for (int i = 0; i < lucky.length-1-oddballs; i++) {
+    pushMatrix();
+      lucky[i].move();
+      lucky[i].show();
+    popMatrix();
+  }
 for (int i = lucky.length-1; i > lucky.length-1-oddballs; i--) {
     lucky[i].redirect();
     lucky[i].move();
