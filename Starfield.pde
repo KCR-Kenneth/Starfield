@@ -34,15 +34,15 @@ translate(300,300,10);
       lucky[i].show();
   }
   stroke(0);
-  /*for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 8; i++) {
     rotate(Math.PI/4*i);
     pushMatrix();
       translate(0,-200*scale,0);
       rotateX(PI/2);
       fill(200);
-      rect(-200*tan(PI/8)*scale, 0,400*tan(PI/8)*scale,50*scale);
+      rect(-200*tan(Math.PI/8)*scale, 0,400*tan(Math.PI/8)*scale,50*scale);
     popMatrix();
-  }*/
+  }
   tic++;
   if (tic == 512) {
      tic = 1; 
