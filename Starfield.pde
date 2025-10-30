@@ -23,7 +23,7 @@ background(0,0,0);
 translate(300,300,10);
  for (int i = 0; i < lucky.length-1-oddballs; i++) {
     pushMatrix();
-      rotate(rotate);
+      //rotate(rotate);
       lucky[i].move();
       lucky[i].show();
     popMatrix();
@@ -34,7 +34,7 @@ translate(300,300,10);
       lucky[i].show();
   }
   stroke(0);
-  for (int i = 0; i < 8; i++) {
+  /*for (int i = 0; i < 8; i++) {
     rotate(Math.PI/4*i);
     pushMatrix();
       translate(0,-200*scale,0);
@@ -42,7 +42,7 @@ translate(300,300,10);
       fill(200);
       rect(-200*tan(Math.PI/8)*scale, 0,400*tan(Math.PI/8)*scale,50*scale);
     popMatrix();
-  }
+  }*/
   tic++;
   if (tic == 512) {
      tic = 1; 
