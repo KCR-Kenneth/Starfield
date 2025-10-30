@@ -16,16 +16,7 @@ void setup() {
 
 void draw() {
 ellipse(300,300,20,20);
-background(0);
-  translate(300,300,10);
-  
-  for (int i = 0; i < lucky.length-1-oddballs; i++) {
-    pushMatrix();
-      rotate(rotate);
-      lucky[i].move();
-      lucky[i].show();
-    popMatrix();
-  }
+
 }
 
 public void decorate() {
