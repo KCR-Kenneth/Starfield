@@ -32,41 +32,6 @@
   }
   
   translate(0,0,-10);
-  decorate();
-}
-
-
-
- void decorate() {
-  stroke(0);
-  for (int i = 0; i < 8; i++) {
-    rotate(PI/4*i);
-    pushMatrix();
-      translate(0,-200*scale,0);
-      rotateX(PI/2);
-      fill(200);
-      rect(-200*tan(PI/8)*scale, 0,400*tan(PI/8)*scale,50*scale);
-    popMatrix();
-  }
-  tic++;
-  if (tic == 512) {
-     tic = 1; 
-  }
-  if (tic < 32 || tic > 512 - 32) {
-    rotate = PI/96*tic;
-  } else if (tic < 64 || tic > 512 - 64) {
-    rotate = PI/64*tic;
-  } else {
-    rotate = PI/32*tic;
-  }
-  rotate(rotate);
-  
-  
-  for (int i = 0; i < 8; i++) {
-    rotate(PI/4);
-    fill (255);
-    triangle(0,0,tan(PI/8)*200*scale, -200*scale, -tan(PI/8)*200*scale, -200*scale);
-  }
 }
 
 class Particle {
